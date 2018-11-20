@@ -11,16 +11,20 @@ package estudiojuridico;
  */
 public class Cliente extends Persona {
 
+
   
   
   private int presupuesto;
   private int saldoPago;
   private int saldoAdeudado;
   private int pago;
+  private int nroCliente;
   
   
   //contructor
-  
+ public Cliente(){
+   
+ } 
   
   //metodos
   
@@ -33,7 +37,24 @@ public class Cliente extends Persona {
     return saldoAdeudado;
     
   } 
-  
+
+ 
+ 
+ 
+ 
+  /**
+   * @return the nroCliente
+   */
+  public int getNroCliente() {
+    return nroCliente;
+  }
+
+  /**
+   * @param nroCliente the nroCliente to set
+   */
+  public void setNroCliente(int nroCliente) {
+    this.nroCliente = nroCliente;
+  }
   /**
    * @return the pago
    */
