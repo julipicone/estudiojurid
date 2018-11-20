@@ -5,6 +5,9 @@
  */
 package estudiojuridico;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  *
  * @author Julieta
@@ -17,7 +20,7 @@ public class EstudioJuridico {
   public static void main(String[] args) {
     // TODO code application logic here
     Cliente cliente1 = new Cliente();
-    cliente1.setApellido("gomez");
+    cliente1.setApellido("Gomez");
     cliente1.setNombre("Ana");
     cliente1.setDni("22345432");
     
@@ -25,6 +28,14 @@ public class EstudioJuridico {
     cliente1.setSaldoAdeudado(1000);
     cliente1.actualizarDeuda(300);
     cliente1.deuda();
+    //-----------
+    
+    Set <Cliente> clientesEstudio = new HashSet<Cliente>();
+    clientesEstudio.add(cliente1);
+    for (Cliente cliente : clientesEstudio) {
+      System.out.println("Nombre: "+ cliente.getNombre()+ ". Apellido: "+ cliente.getApellido()+ ". Telefono: "+ 
+              cliente.getTelefonoCel());
+    }
     
   }
   
